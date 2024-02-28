@@ -1,0 +1,191 @@
+{
+  "table1s": {
+    "post": {
+      "/datatable": [
+        "App Admin"
+      ],
+      "/": [
+        "App Admin"
+      ]
+    },
+    "get": {
+      "/autosuggest/sidunique": [
+        "App Admin"
+      ],
+      "/{sid}": [
+        "App Admin"
+      ],
+      "/autosuggest/in1": [
+        "App Admin"
+      ],
+      "/autosuggest": [
+        "App Admin"
+      ]
+    },
+    "put": {
+      "/": [
+        "App Admin"
+      ]
+    },
+    "delete": {
+      "/{ids}": [
+        "App Admin"
+      ],
+      "/{id}/delete/{ids}": [
+        "App Admin"
+      ]
+    }
+  },
+  "workflowhistory": {
+    "post": {
+      "/{workflowType}/{modelid}/datatable": [
+        "PermitAll"
+      ]
+    }
+  },
+  "rappitjitgrouprolemapping": {
+    "post": {
+      "/datatable": [
+        "App Admin"
+      ],
+      "/": [
+        "App Admin"
+      ]
+    },
+    "put": {
+      "/": [
+        "App Admin"
+      ]
+    },
+    "delete": {
+      "/{ids}": [
+        "App Admin"
+      ]
+    }
+  },
+  "attachments": {
+    "post": {
+      "/link": [
+        "PermitAll"
+      ],
+      "/upload": [
+        "PermitAll"
+      ]
+    },
+    "get": {
+      "/download/attachment/{attachment_id}": [
+        "PermitAll"
+      ],
+      "/download/inline/{attachment_id}": [
+        "PermitAll"
+      ],
+      "/all/{modelKey}": [
+        "PermitAll"
+      ]
+    },
+    "delete": {
+      "/{ids}}": [
+        "PermitAll"
+      ],
+      "/attachments/{ids}": [
+        "PermitAll"
+      ]
+    }
+  },
+  "environmentinfo": {
+    "get": {
+      "/": [
+        "PermitAll"
+      ]
+    }
+  },
+  "workflowconfig": {
+    "get": {
+      "/getconfig/{workflowType}": [
+        "PermitAll"
+      ]
+    }
+  },
+  "changelogs": {
+    "post": {
+      "/datatable/{entityName}/{entityId}/{fieldName}/{fromModifiedDate}": [
+        "PermitAll"
+      ]
+    }
+  },
+  "applicationusers": {
+    "post": {
+      "/datatable": [
+        "App Admin"
+      ],
+      "/": [
+        "App Admin"
+      ]
+    },
+    "get": {
+      "/autosuggest/sidunique": [
+        "App Admin"
+      ],
+      "/roles": [
+        "PermitAll"
+      ],
+      "/user-details": [
+        "PermitAll"
+      ],
+      "/autosuggest/emailprimary": [
+        "App Admin"
+      ],
+      "/{sid}": [
+        "App Admin"
+      ],
+      "/autosuggest": [
+        "App Admin"
+      ]
+    },
+    "put": {
+      "/": [
+        "App Admin"
+      ]
+    },
+    "delete": {
+      "/{ids}": [
+        "App Admin"
+      ]
+    },
+    "options": {}
+  },
+  "otp": {
+    "post": {
+      "/validateotp/{otp}": [
+        "PermitAll"
+      ],
+      "/generateandsendotp": [
+        "PermitAll"
+      ],
+      "/forgotpasswordotp": [
+        "PermitAll"
+      ]
+    }
+  },
+  "usernotificationsyncinfo": {
+    "put": {
+      "/updatesynctime": [
+        "PermitAll"
+      ]
+    }
+  },
+  "notifications": {
+    "post": {
+      "/notifications/datatable": [
+        "PermitAll"
+      ]
+    }
+  },
+  "deploy": {
+    "post": {
+      "/setup": [
+        "App Admin"
+      ]
+    }
+  }
+}

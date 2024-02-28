@@ -1,0 +1,51 @@
+{
+	"name": "UPDATE_SUCCESS",
+	"description":"Update success",
+	"inputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"outputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "foreignKeyConfiguration":{
+             },
+				            "inputData":{
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/applicationusers/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"ApplicationUser"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ]
+		     }
+	       ],
+	"requestDetails":{
+			           "foreignKeyConfiguration":{
+             },
+			           "serviceType":"UPDATE",
+			           "inputData":{
+             },
+			           "method":"PUT",
+			           "requestUrl":"/rest/applicationusers/",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"ApplicationUser"
+             },
+			           "userName":"AppAdmin"		
+	       },
+	"outputData": [{
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "ApplicationUser":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/applicationusers/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

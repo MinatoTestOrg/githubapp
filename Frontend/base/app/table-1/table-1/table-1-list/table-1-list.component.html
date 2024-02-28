@@ -1,0 +1,70 @@
+
+<div class="list table-1-list">
+ <div class="wrokflow-simulate" *ngIf="showWorkflowSimulator">
+        <span class="arrow_box">Workflow Simulator</span>
+        <button pButton pRipple type="button" icon="pi pi-cog" class="p-button-rounded wrokflow-simulate-btn"  [fitContent]="false"  (click)="openWorkflowSimilator()"></button>
+    </div>
+   <div id="title-bar">
+    <div class="display">
+        <div class="col" class="page-title-bar" *ngIf="(isMobile && !isSearchFocused) || !isMobile">
+            <!-- <span class="pi pi-arrow-left back-action"></span> -->
+            <span class="page-title" [innerHTML]="pageViewTitle | translate"></span>
+        </div>
+        <div class="w-100"  *ngIf="showBreadcrumb"> <app-breadcrumb></app-breadcrumb></div>
+        <app-action-bar [buttons] = "leftActionBarConfig.children"
+(onBtnClick)='actionBarAction($event)'
+[style.order]="isMobile?'1':'0'"
+[isRowSelected]="isRowSelected" [isChildListpage]="isChildPage"
+[isListPage]="isList" [detailConditionalButtons]="conditionalActions">
+</app-action-bar><app-action-bar [buttons] = "rightActionBarConfig.children"
+(onBtnClick)='actionBarAction($event)'
+[style.order]="isMobile?'1':'0'"
+[isRowSelected]="isRowSelected" [isChildListpage]="isChildPage"
+[isListPage]="isList" [detailConditionalButtons]="conditionalActions">
+</app-action-bar><div class="p-0" id="search-container" [ngStyle]="{'width':isMobile && isSearchFocused? '100%':'50%' }" [ngClass]="{'advance-filter-applied':filtersApplied}">
+    <div class="input-group-append d-flex justify-content-end advancedSearch-only"
+        *ngIf="(tableSearchConfig.showAdvancedSearch)">
+        <span class="input-group-text pi pi-filter icon-font  cursor-pointer" (click)="toggleAdvancedSearch()"
+            #toggleButton></span>
+    </div>
+
+    <div class="advanced-search ev-detail-view" *ngIf="(tableSearchConfig.showAdvancedSearch && showAdvancedSearch)"
+        #menu>
+        <span class="pr-3 pt-0 adv-search-header" [innerHTML]="'Advanced Search'| translate"></span>
+        <span style="float:right" class="cursor-pointer"><i class="pi pi-times"
+                (click)="toggleAdvancedSearch()"></i></span>
+        <form [formGroup]="tableSearchControls" (ngSubmit)="advancedSearch()" class="ev-form">
+            <div class="row form-body">
+                <div class="form-row vg-col-2">
+                    
+                </div>
+            </div>
+            <div class="search-actions">
+                <div>
+                    <button type="button" class="btn btn-secondary search-btn" (click)="clearFilterValues()">Clear
+                        Filter</button>
+                </div>
+                <div>
+                    <div class="btn-group mr-0" role="group">
+                        <button type="button" class="btn btn-secondary search-btn"
+                            (click)="toggleAdvancedSearch()">Cancel</button>
+                        <button type="submit" class="btn btn-primary search-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+    </div>
+</div><div class="row" id="filter-container" *ngIf="quickFilterConfig?.children?.length > 0">
+    <div class="quick-filters ev-detail-view">
+        <form [formGroup]="quickFilterControls">
+             <div class="row align-filter" [ngClass]="quickFilterConfig.style ==='style_2'? 'rowfiltercolumnfilter':'columnfilter'">
+                
+            </div>
+        </form>
+    </div>
+</div><app-grid [gridConfig]="gridConfig" *ngIf="gridConfig" [ngClass]="this.tableConfig.viewAs === 'card' ? 'gridsterList' : ''"  class="{{tableConfig.tableStyle}}"></app-grid>
+
+</div>

@@ -1,0 +1,3 @@
+com.minatogithuborg.githubapp.config.ApplicationRepositoriesAutoConfiguration
+com.minatogithuborg.githubapp.config.ApplicationTransactionManagersAutoConfig
+com.minatogithuborg.githubapp.config.ApplicationProvidersAutoConfiguration

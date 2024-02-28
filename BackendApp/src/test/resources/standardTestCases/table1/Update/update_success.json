@@ -1,0 +1,57 @@
+{
+	"name": "UPDATE_SUCCESS",
+	"description":"Update success",
+	"inputModelName":"com.minatogithuborg.githubapp.model.Table1",
+	"outputModelName":"com.minatogithuborg.githubapp.model.Table1",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "foreignKeyConfiguration":{
+             },
+				            "inputData":{
+                        "f1":"KE4bOgIltpJd7heLmbrckRK3B",
+                        "f2":"9ZYEoDuG0OUMfcBo9HwyDMeGm"
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/table1s/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Table1"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ]
+		     }
+	       ],
+	"requestDetails":{
+			           "foreignKeyConfiguration":{
+             },
+			           "serviceType":"UPDATE",
+			           "inputData":{
+                        "f2":"AyoiK2nOji1rlElYWEyo6AyLD",
+                        "f1":"yJxlv4zaB17pjQB4YvvYI4BPq"
+             },
+			           "method":"PUT",
+			           "requestUrl":"/rest/table1s/",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Table1"
+             },
+			           "userName":"AppAdmin"		
+	       },
+	"outputData": [{
+                        "f2":"AyoiK2nOji1rlElYWEyo6AyLD",
+                        "f1":"yJxlv4zaB17pjQB4YvvYI4BPq"
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "Table1":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/table1s/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

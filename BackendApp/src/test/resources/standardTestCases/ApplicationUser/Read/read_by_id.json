@@ -1,0 +1,47 @@
+{
+	"name": "READ_BY_ID",
+	"description":"Read by id",
+	"inputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"outputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "foreignKeyConfiguration":{
+             },
+				            "inputData":{
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/applicationusers/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"ApplicationUser"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ]
+		     }
+	       ],
+	"requestDetails":{
+			           "serviceType":"GET_BY_SID",
+			           "method":"GET",
+			           "requestUrl":"/rest/applicationusers/{sid}",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"ApplicationUser"
+             },
+			           "userName":"AppAdmin"		
+	       },
+	"outputData": [{
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "ApplicationUser":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/applicationusers/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

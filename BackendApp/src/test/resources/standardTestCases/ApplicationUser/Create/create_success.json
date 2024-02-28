@@ -1,0 +1,37 @@
+{
+	"name": "CREATE_SUCCESS",
+	"description":"Create success",
+	"inputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"outputModelName":"com.minatogithuborg.githubapp.model.ApplicationUser",
+	"setUp":[
+	       ],
+	"requestDetails":{
+			           "serviceType":"CREATE",
+			           "foreignKeyConfiguration":{
+             },
+			           "inputData":{
+             },
+			           "method":"POST",
+			           "requestUrl":"/rest/applicationusers/",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"ApplicationUser"
+             },
+			           "userName":"AppAdmin",
+			           "fileAttachmentInfo":[ 
+             ]		
+	       },
+	"outputData": [{
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "ApplicationUser":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/applicationusers/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

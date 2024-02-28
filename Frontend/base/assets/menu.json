@@ -1,0 +1,45 @@
+{
+  "left" : [ {
+    "accessControl" : [ "App Admin" ],
+    "outline" : false,
+    "label" : "MENU",
+    "element" : "menuItem"
+  }, {
+    "pathsInvolved" : [ "/applicationuser/applicationuserlist" ],
+    "accessControl" : [ "App Admin" ],
+    "onClick" : "navigate_to_page",
+    "outline" : false,
+    "label" : "APPLICATION_USER",
+    "page" : {
+      "sid" : "e7b20aa1-e549-487e-9929-3eb4d8b317b5",
+      "name" : "Application Users",
+      "url" : "/applicationuser/applicationuserlist"
+    },
+    "element" : "menuItem"
+  }, {
+    "pathsInvolved" : [ "/table1/table1detail" ],
+    "accessControl" : [ "all" ],
+    "onClick" : "navigate_to_page",
+    "outline" : false,
+    "infiniteScroll" : false,
+    "valueChange" : true,
+    "currentNode" : "ab699174-ce2c-4b4a-bcf2-ed4d0bd69aa4",
+    "label" : "M1",
+    "page" : {
+      "sid" : "922e7fe1-ef82-46be-bd29-3b95ef5894f1",
+      "name" : "table 1 Detail",
+      "url" : "/table1/table1detail"
+    },
+    "element" : "menuItem"
+  } ],
+  "topBarLeft" : [ ],
+  "topBarMiddle" : [ ],
+  "topBarRight" : [ {
+    "languages" : [ {
+      "code" : "en",
+      "name" : "English"
+    } ],
+    "element" : "language"
+  } ],
+  "right" : [ ]
+}
