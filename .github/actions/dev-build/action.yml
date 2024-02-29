@@ -33,7 +33,7 @@ runs:
       sed -i 's/${env.ARTIFACTORY_USER}/${{inputs.ARTIFACTORY_USER}}/' .m2/settings.xml
       sed -i 's/${env.ARTIFACTORY_PASS}/${{inputs.ARTIFACTORY_PASS}}/' .m2/settings.xml
       npm install -g @angular/cli
-      mvn -s .m2/settings.xml --batch-mode clean install dev
+      mvn -s .m2/settings.xml --batch-mode clean install -P dev
       mvn -f BackendApp/pom.xml jib:build -P cloud-run-dev -s .m2/settings.xml --batch-mode -X -D IMAGE_VERSION_ID=${{inputs.IMAGE_VERSION_ID}} -D COMMIT_ID=${GITHUB_SHA}
 
   - name: Login
